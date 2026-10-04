@@ -118,7 +118,7 @@ function Home() {
   }, [togglePlay]);
 
   useEffect(() => {
-    document.title = current && playing ? `${current.title} · Dhasuu` : "Dhasuu";
+    document.title = current && playing ? `${current.title} · SunteRaho` : "SunteRaho";
     if ("mediaSession" in navigator && current) {
       navigator.mediaSession.metadata = new MediaMetadata({ title: current.title, artist: current.artist });
       navigator.mediaSession.setActionHandler("previoustrack", () => step(-1));
@@ -154,9 +154,9 @@ function Home() {
       />
 
       <header className="topbar">
-        <a className="brand" href="/" aria-label="Dhasuu home">
-          <span className="brand-mark">d</span>
-          <span className="brand-name">dhasuu</span>
+        <a className="brand" href="/" aria-label="SunteRaho home">
+          <span className="brand-mark">SR</span>
+          <span className="brand-name">SunteRaho</span>
         </a>
         <a href="/admin" className="add-btn">
           <span aria-hidden="true">＋</span> Add music
