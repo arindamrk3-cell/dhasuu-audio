@@ -2,8 +2,8 @@
   - complementary [ref=e4]:
     - link "Dhasuu home" [ref=e5] [cursor=pointer]:
       - /url: /
-      - generic [ref=e6]: d
-      - generic [ref=e7]: dhasuu.
+      - generic [ref=e6]: SR
+      - generic [ref=e7]: SunteRaho.
     - generic [ref=e8]: YOUR SPACE
     - navigation "Main navigation" [ref=e9]:
       - link "◈ Discover" [ref=e10] [cursor=pointer]:
@@ -124,8 +124,8 @@
             - /url: http://localhost:5000/uploads/1790974748935-Is This Love (Kismat Konnection) - (Raag.Fm).mp3
             - text: ↓
       - generic [ref=e122]:
-        - generic [ref=e123]: DHASUU AUDIO CLUB
+        - generic [ref=e123]: SunteRaho AUDIO CLUB
         - generic [ref=e124]: 6 TRACKS ✳
     - generic [ref=e125]:
       - generic [ref=e126]: GOOD MUSIC SHOULD GO EVERYWHERE.
-      - generic [ref=e127]: © DHASUU
+      - generic [ref=e127]: © SunteRaho
