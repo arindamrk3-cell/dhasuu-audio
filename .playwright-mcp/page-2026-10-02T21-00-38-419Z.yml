@@ -1,0 +1,131 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - link "Dhasuu home" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e6]: d
+      - generic [ref=e7]: dhasuu.
+    - generic [ref=e8]: YOUR SPACE
+    - navigation "Main navigation" [ref=e9]:
+      - link "◈ Discover" [ref=e10] [cursor=pointer]:
+        - /url: "#discover"
+        - generic [ref=e11]: ◈
+        - text: Discover
+      - link "♫ Your library" [ref=e12] [cursor=pointer]:
+        - /url: "#library"
+        - generic [ref=e13]: ♫
+        - text: Your library
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: ✳
+        - paragraph [ref=e17]:
+          - text: Good sound.
+          - strong [ref=e18]: No strings.
+      - link "＋ Add music" [ref=e19] [cursor=pointer]:
+        - /url: /admin
+        - generic [ref=e20]: ＋
+        - text: Add music
+  - main [ref=e21]:
+    - generic [ref=e22]: LISTEN YOUR WAY / DISCOVER
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]: YOUR SOUND, YOUR RULES
+        - heading [level=1] [ref=e28]:
+          - text: Press play.
+          - emphasis [ref=e29]: Feel more.
+        - paragraph [ref=e30]: A little less scrolling. A lot more listening. Find your next repeat-worthy track.
+        - link "Explore the library ↘" [ref=e31] [cursor=pointer]:
+          - /url: "#library"
+          - text: Explore the library
+          - generic [ref=e32]: ↘
+      - generic [aria-hidden] [ref=e33]:
+        - generic [ref=e34]:
+          - text: SOUNDON
+          - generic [ref=e36]: ✳
+        - generic [ref=e37]: 01 / ALWAYS IN ROTATION
+      - generic [ref=e47]: 01—04
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: THE GOOD STUFF
+          - heading "Made for your next mood." [level=2] [ref=e52]
+        - generic [ref=e53]:
+          - generic [aria-hidden] [ref=e54]: ⌕
+          - searchbox "Search tracks and artists" [ref=e55]
+          - generic [ref=e56]: /
+      - generic [ref=e57]:
+        - generic [ref=e58]: TRACK
+        - generic [ref=e59]: LISTEN
+        - generic [ref=e60]: TAKE IT WITH YOU
+      - generic [ref=e61]:
+        - article [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: "01"
+            - generic [ref=e66]: ♫
+            - generic [ref=e67]:
+              - heading "1790973401261-Is This Love (Kismat Konnection) - (Raag.Fm).mp3" [level=3] [ref=e68]
+              - paragraph [ref=e69]: Unknown Artist
+          - generic "Play 1790973401261-Is This Love (Kismat Konnection) - (Raag.Fm).mp3 by Unknown Artist" [ref=e70]
+          - link "Download 1790973401261-Is This Love (Kismat Konnection) - (Raag.Fm).mp3" [ref=e71] [cursor=pointer]:
+            - /url: http://localhost:5000/uploads/1790973401261-Is This Love (Kismat Konnection) - (Raag.Fm).mp3
+            - text: ↓
+        - article [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: "02"
+            - generic [ref=e76]: ♫
+            - generic [ref=e77]:
+              - heading "1790973733469-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3" [level=3] [ref=e78]
+              - paragraph [ref=e79]: Unknown Artist
+          - generic "Play 1790973733469-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3 by Unknown Artist" [ref=e80]
+          - link "Download 1790973733469-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3" [ref=e81] [cursor=pointer]:
+            - /url: http://localhost:5000/uploads/1790973733469-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3
+            - text: ↓
+        - article [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: "03"
+            - generic [ref=e86]: ♫
+            - generic [ref=e87]:
+              - heading "1790973765967-Is This Love (Kismat Konnection) - (Raag.Fm).mp3" [level=3] [ref=e88]
+              - paragraph [ref=e89]: Unknown Artist
+          - generic "Play 1790973765967-Is This Love (Kismat Konnection) - (Raag.Fm).mp3 by Unknown Artist" [ref=e90]
+          - link "Download 1790973765967-Is This Love (Kismat Konnection) - (Raag.Fm).mp3" [ref=e91] [cursor=pointer]:
+            - /url: http://localhost:5000/uploads/1790973765967-Is This Love (Kismat Konnection) - (Raag.Fm).mp3
+            - text: ↓
+        - article [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: "04"
+            - generic [ref=e96]: ♫
+            - generic [ref=e97]:
+              - heading "1790974109470-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3" [level=3] [ref=e98]
+              - paragraph [ref=e99]: Unknown Artist
+          - generic "Play 1790974109470-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3 by Unknown Artist" [ref=e100]
+          - link "Download 1790974109470-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3" [ref=e101] [cursor=pointer]:
+            - /url: http://localhost:5000/uploads/1790974109470-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3
+            - text: ↓
+        - article [ref=e102]:
+          - generic [ref=e103]:
+            - generic [ref=e104]: "05"
+            - generic [ref=e106]: ♫
+            - generic [ref=e107]:
+              - heading "1790974115095-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3" [level=3] [ref=e108]
+              - paragraph [ref=e109]: Unknown Artist
+          - generic "Play 1790974115095-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3 by Unknown Artist" [ref=e110]
+          - link "Download 1790974115095-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3" [ref=e111] [cursor=pointer]:
+            - /url: http://localhost:5000/uploads/1790974115095-Agar Tum Saath Ho_320(PagalWorld.com.sb).mp3
+            - text: ↓
+        - article [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114]: "06"
+            - generic [ref=e116]: ♫
+            - generic [ref=e117]:
+              - heading "1790974748935-Is This Love (Kismat Konnection) - (Raag.Fm).mp3" [level=3] [ref=e118]
+              - paragraph [ref=e119]: Unknown Artist
+          - generic "Play 1790974748935-Is This Love (Kismat Konnection) - (Raag.Fm).mp3 by Unknown Artist" [ref=e120]
+          - link "Download 1790974748935-Is This Love (Kismat Konnection) - (Raag.Fm).mp3" [ref=e121] [cursor=pointer]:
+            - /url: http://localhost:5000/uploads/1790974748935-Is This Love (Kismat Konnection) - (Raag.Fm).mp3
+            - text: ↓
+      - generic [ref=e122]:
+        - generic [ref=e123]: DHASUU AUDIO CLUB
+        - generic [ref=e124]: 6 TRACKS ✳
+    - generic [ref=e125]:
+      - generic [ref=e126]: GOOD MUSIC SHOULD GO EVERYWHERE.
+      - generic [ref=e127]: © DHASUU
