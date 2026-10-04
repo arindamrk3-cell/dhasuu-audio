@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Admin from "./Admin";
 import "./App.css";
 
-const API = "http://localhost:5000";
+const API = "https://dhasuu-audio.onrender.com";
 const CATEGORIES = ["All", "Sad", "Romantic", "Party", "Dance", "80s", "90s", "Bollywood", "Pop", "Rock", "Chill", "Trending"];
 
 const hue = (s = "") => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);

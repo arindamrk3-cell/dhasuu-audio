@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import "./Admin.css";
 
-const API = "http://localhost:5000";
+const API = "https://dhasuu-audio.onrender.com";
 const CATEGORIES = ["Sad", "Romantic", "Party", "Dance", "80s", "90s", "Bollywood", "Pop", "Rock", "Chill", "Trending"];
 
 const size = (b) => (b > 1048576 ? `${(b / 1048576).toFixed(1)} MB` : `${Math.round(b / 1024)} KB`);
