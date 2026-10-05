@@ -22,6 +22,7 @@ function Home() {
   const [loadError, setLoadError] = useState(false);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
+  const [selectedArtist, setSelectedArtist] = useState("All");
   const [onlyFavs, setOnlyFavs] = useState(false);
   const [favs, setFavs] = useState(loadFavs);
   const [currentId, setCurrentId] = useState(null);
@@ -31,6 +32,14 @@ function Home() {
   const [volume, setVolume] = useState(1);
   const audioRef = useRef(null);
   const searchRef = useRef(null);
+  const artists = [
+  "Arijit Singh",
+  "Atif Aslam",
+  "Shreya Ghoshal",
+  "Armaan Malik",
+  "KK",
+  "Sonu Nigam",
+];
 
   const loadAudios = useCallback(() => {
     setLoading(true);
@@ -61,12 +70,12 @@ function Home() {
     const q = search.toLowerCase().trim();
     return audios.filter((a) => {
       const text = `${a.title} ${a.artist} ${a.category || ""}`.toLowerCase();
-      return text.includes(q) && (category === "All" || a.category === category) && (!onlyFavs || favs.includes(a.id));
+      return text.includes(q) && (category === "All" || a.category === category) && (selectedArtist === "All" || (a.artist || "").toLowerCase().includes(selectedArtist.toLowerCase())) && (!onlyFavs || favs.includes(a.id));
     });
-  }, [audios, search, category, onlyFavs, favs]);
+  }, [audios, search, category, selectedArtist, onlyFavs, favs]);
 
   const current = audios.find((a) => a.id === currentId);
-  const filtersOn = search || category !== "All" || onlyFavs;
+  const filtersOn = search || category !== "All" || selectedArtist !== "All" || onlyFavs;
 
   const toggleFav = (id) => setFavs((f) => (f.includes(id) ? f.filter((x) => x !== id) : [...f, id]));
 
@@ -138,6 +147,7 @@ function Home() {
   const clearFilters = () => {
     setSearch("");
     setCategory("All");
+    setSelectedArtist("All");
     setOnlyFavs(false);
   };
 
@@ -188,6 +198,39 @@ function Home() {
             <kbd>/</kbd>
           </label>
         </section>
+       <section className="artists-section">
+  <div className="section-header">
+    <h2>Popular Artists</h2>
+  </div>
+
+  <div className="artists-list">
+
+    <button
+      className={`artist-card ${
+        selectedArtist === "All" ? "active" : ""
+      }`}
+      onClick={() => setSelectedArtist("All")}
+    >
+      <div className="artist-icon">🎵</div>
+      <span>All Artists</span>
+    </button>
+
+    {artists.map((artist) => (
+      <button
+        key={artist}
+        className={`artist-card ${
+          selectedArtist === artist ? "active" : ""
+        }`}
+        onClick={() => setSelectedArtist(artist)}
+      >
+        <div className="artist-icon">🎤</div>
+        <span>{artist}</span>
+      </button>
+    ))}
+
+  </div>
+</section>
+
 
         <section className="library" id="library">
           <div className="chips" role="tablist" aria-label="Moods and genres">
@@ -289,7 +332,7 @@ function Home() {
           )}
         </section>
 
-        <footer className="foot">Good music should go everywhere. © Dhasuu</footer>
+        <footer className="foot">Good music should go everywhere. © SunteRaho</footer>
       </main>
 
       {current && (

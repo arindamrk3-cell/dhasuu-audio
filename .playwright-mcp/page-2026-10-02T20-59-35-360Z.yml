@@ -1,6 +1,6 @@
 - generic [ref=e3]:
   - complementary [ref=e4]:
-    - link "Dhasuu home" [ref=e5] [cursor=pointer]:
+    - link "SunteRaho home" [ref=e5] [cursor=pointer]:
       - /url: /
       - generic [ref=e6]: SR
       - generic [ref=e7]: SunteRaho.
