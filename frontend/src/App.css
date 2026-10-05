@@ -183,6 +183,9 @@ input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; border: 0; bo
   .app.has-player { padding-bottom: 190px; }
   .hero { padding-top: 20px; }
   .tag { display: none; }
+    .hero { padding: 8px 0 16px; }
+  .hero p { display: none; }
+  .hero h1 { font-size: 40px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
