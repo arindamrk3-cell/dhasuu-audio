@@ -205,3 +205,9 @@ input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; border: 0; bo
 .artist-card.active { border-color: var(--mango); color: var(--text); background: var(--surface-2); }
 .artist-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; font-size: 20px; background: linear-gradient(135deg, var(--mango), var(--rose)); }
 .brand-mark { font-size: 14px; letter-spacing: -0.04em; }
+
+.top-actions { display: flex; align-items: center; gap: 8px; }
+.install-btn { background: linear-gradient(90deg, var(--mango), var(--rose)); color: #1a1226; border-color: transparent; cursor: pointer; }
+.install-btn:hover { background: linear-gradient(90deg, var(--mango), var(--rose)); filter: brightness(1.08); }
+.ios-hint { margin: 0 0 12px; padding: 12px 14px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); font-size: 14px; animation: rise 0.3s; }
+@media (max-width: 680px) { .add-btn { padding: 9px 12px; font-size: 13px; } }

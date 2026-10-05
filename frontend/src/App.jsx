@@ -7,6 +7,8 @@ const CATEGORIES = ["All", "Sad", "Romantic", "Party", "Dance", "80s", "90s", "B
 
 const hue = (s = "") => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
 const fmt = (t) => (isFinite(t) ? `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}` : "0:00");
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
 
 function loadFavs() {
   try {
@@ -65,7 +67,33 @@ function Home() {
       localStorage.setItem("dhasuu-favs", JSON.stringify(favs));
     } catch {}
   }, [favs]);
+    const [installEvt, setInstallEvt] = useState(null);
+  const [iosHint, setIosHint] = useState(false);
 
+  useEffect(() => {
+    const onPrompt = (e) => {
+      e.preventDefault();
+      setInstallEvt(e);
+    };
+    const onInstalled = () => setInstallEvt(null);
+    window.addEventListener("beforeinstallprompt", onPrompt);
+    window.addEventListener("appinstalled", onInstalled);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", onPrompt);
+      window.removeEventListener("appinstalled", onInstalled);
+    };
+  }, []);
+
+  const canInstall = !isStandalone() && (installEvt || isIOS);
+  const install = async () => {
+    if (installEvt) {
+      installEvt.prompt();
+      await installEvt.userChoice;
+      setInstallEvt(null);
+    } else {
+      setIosHint((v) => !v);
+    }
+  };
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
     return audios.filter((a) => {
@@ -168,10 +196,19 @@ function Home() {
           <span className="brand-mark">SR</span>
           <span className="brand-name">SunteRaho</span>
         </a>
-        <a href="/admin" className="add-btn">
-          <span aria-hidden="true">＋</span> Add music
-        </a>
+                <div className="top-actions">
+          {canInstall && (
+            <button className="add-btn install-btn" onClick={install}>
+              <span aria-hidden="true">⬇</span> Install
+            </button>
+          )}
+          <a href="/admin" className="add-btn">
+            <span aria-hidden="true">＋</span> Add music
+          </a>
+        </div>
       </header>
+      {iosHint && <div className="ios-hint">Tap the Share icon in Safari, then choose "Add to Home Screen".</div>}
+      
 
       <main>
         <section className="hero">
