@@ -223,7 +223,7 @@ function Home() {
         }`}
         onClick={() => setSelectedArtist(artist)}
       >
-        <div className="artist-icon">🎤</div>
+        <div className="artist-icon">{artist[0]}</div>
         <span>{artist}</span>
       </button>
     ))}
